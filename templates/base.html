@@ -36,7 +36,11 @@
                         {% else %}
                         <li><a href="{{url_for('comingsoon')}}">Coming Soon</a></li>    
                         {% endif %}
+                        {% if request.path.startswith(url_for('contact')) %}
+                        <li class="active"><a href="{{url_for('contact')}}">Contact</a></li>
+                        {% else %}
                         <li class="has-form"><a href="{{url_for('contact')}}" class="button">Contact</a></li>
+                        {% endif %}
                     </ul>
     
                 <!-- Left Nav Section 
